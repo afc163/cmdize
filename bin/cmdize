@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+var path = require('path'),
+    fs = require('fs'),
+    program = require('commander'),
+    pkg = require('../package.json'),
+    cmdize = require('../index');
+
+require('colorful').toxic();
+
+program
+    .version(pkg.version)
+    .usage('file|url [options]')
+    .option('-c --clear-global', 'clear global variables from window')
+    .parse(process.argv);
+
+program.on('--help', function() {
+  console.log('  Examples:'.cyan);
+  console.log();
+  console.log('   $'.green + ' cmdize example.js');
+  console.log('   $'.green + ' cmdize ~/Desktop/example.js');
+  console.log();
+});
+
+program.parse(process.argv);
+
+if (!process.argv[2]) {
+  program.help();
+}
+
+var files = process.argv.slice(2);
+var code = fs.readFileSync(files[0]);
+
+console.log('Reading ' + files[0].cyan + ' ...');
+
+var options = {};
+options.clearGlobal = program.clearGlobal;
+
+cmdize(code, options, function(result) {
+    fs.writeFileSync('cmdized.js', result);
+    console.log('cmdized.js is generated.');
+    console.log('  >> ' + path.resolve('cmdized.js').green);
+
+    // force to exit
+    process.exit(0);
+});

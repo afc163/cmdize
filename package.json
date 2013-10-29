@@ -1,0 +1,33 @@
+{
+  "name": "cmdize",
+  "version": "0.0.0",
+  "description": "Convert normal js to cmd module.",
+  "main": "index.js",
+  "repository": "git@github.com:afc163/cmdize.git",
+  "author": "afc163 <afc163@gmail.com>",
+  "bin": {
+    "cmdize": "./bin/cmdize"
+  },
+  "keywords": [
+    "cmd",
+    "seajs"
+  ],
+  "engines": {
+    "node": ">= 0.8.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "~2.0.0",
+    "colorful": "~2.1.0",
+    "phantomjs": "~1.9.2-2",
+    "win-spawn": "~2.0.0",
+    "node-static": "~0.7.2"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
