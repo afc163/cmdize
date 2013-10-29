@@ -4,11 +4,11 @@
 [![NPM version](https://badge.fury.io/js/cdn.png)](http://badge.fury.io/js/cmdize)
 [![David Status](https://david-dm.org/afc163/cdn.png)](https://david-dm.org/afc163/cmdize) 
 
-Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md), [中文](https://github.com/seajs/seajs/issues/242))
+Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md) [中文定义](https://github.com/seajs/seajs/issues/242))
 
 > It is a experimental project, being cautious to use it in important situation please!
 
-![demo](https://i.alipayobjects.com/e/201310/1OP71JwVRt.png)
+![demo](https://i.alipayobjects.com/e/201310/1OP6NAiAzF.png)
 
 ---
 
