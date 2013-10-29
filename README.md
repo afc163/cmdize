@@ -1,8 +1,8 @@
 # Cmdize 
 
 [![Build Status](https://travis-ci.org/afc163/cmdize.png)](https://travis-ci.org/afc163/cmdize)
-[![NPM version](https://badge.fury.io/js/cdn.png)](http://badge.fury.io/js/cmdize)
-[![David Status](https://david-dm.org/afc163/cdn.png)](https://david-dm.org/afc163/cmdize) 
+[![NPM version](https://badge.fury.io/js/cmdize.png)](http://badge.fury.io/js/cmdize)
+[![David Status](https://david-dm.org/afc163/cmdize.png)](https://david-dm.org/afc163/cmdize) 
 
 Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md) [中文定义](https://github.com/seajs/seajs/issues/242))
 
