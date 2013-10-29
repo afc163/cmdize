@@ -1,4 +1,4 @@
-# CDN 
+# Cmdize 
 
 [![Build Status](https://travis-ci.org/afc163/cmdize.png)](https://travis-ci.org/afc163/cmdize)
 [![NPM version](https://badge.fury.io/js/cdn.png)](http://badge.fury.io/js/cmdize)
@@ -8,7 +8,7 @@ Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/
 
 > It is a experimental project, being cautious to use it in important situation please!
 
-![demo](https://i.alipayobjects.com/e/201301/22tNik5rDY.png)
+![demo](https://i.alipayobjects.com/e/201310/1OP71JwVRt.png)
 
 ---
 
@@ -18,7 +18,7 @@ Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/
 $ npm install cmdize -g
 ```
 
-## Usage
+## Use in cli
 
 There is a js file `exmple.js`:
 

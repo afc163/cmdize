@@ -29,9 +29,10 @@ if (!process.argv[2]) {
 }
 
 var files = process.argv.slice(2);
-var code = fs.readFileSync(files[0]);
+var fpath = fs.realpathSync(files[0]);
+var code = fs.readFileSync(fpath);
 
-console.log('Reading ' + files[0].cyan + ' ...');
+console.log('Reading ' + fpath.cyan + ' ...');
 
 var options = {};
 options.clearGlobal = program.clearGlobal;

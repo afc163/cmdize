@@ -30,7 +30,7 @@ module.exports = function(code, options, callback) {
     phantomjs = 'phantomjs';
   }
 
-  var subprocess = spawn(phantomjs, ['./lib/phantomjs-script.js']);
+  var subprocess = spawn(phantomjs, [__dirname + '/lib/phantomjs-script.js']);
 
   subprocess.stdout.on('data', function(data) {
     var variables = data.toString().replace(/\n$/, '');
