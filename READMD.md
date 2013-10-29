@@ -4,7 +4,9 @@
 [![NPM version](https://badge.fury.io/js/cdn.png)](http://badge.fury.io/js/cmdize)
 [![David Status](https://david-dm.org/afc163/cdn.png)](https://david-dm.org/afc163/cmdize) 
 
-Convert normal js to cmd module.
+Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md), [中文](https://github.com/seajs/seajs/issues/242))
+
+> It is a experimental project, being cautious to use it in important situation please!
 
 ![demo](https://i.alipayobjects.com/e/201301/22tNik5rDY.png)
 
@@ -21,7 +23,6 @@ $ npm install cmdize -g
 There is a js file `exmple.js`:
 
 ```js
-// exmple.js
 window.abc = "abc";
 ```
 
@@ -42,7 +43,6 @@ Then the `cmdized.js` would be generated:
 
 ```js
 define(function(require, exports, module) {
-// exmple.js
 window.abc = "abc";
 });
 ```
@@ -55,6 +55,22 @@ window.abc = "abc";
 $ cmdize example.js --clear-global
 ```
 
+It will remove abc from window safely.
+
+```
+define(function(require, exports, module) {
+window.abc = "abc";
+try { delete window.abc } catch(e) { window.abc = null }
+});
 ```
 
+## In NodeJS
+
+```js
+var cmdize = require('cmdize');
+
+cmdize(code, options, function(result) {
+  // print cmdized code
+  console.log(result);
+});
 ```
