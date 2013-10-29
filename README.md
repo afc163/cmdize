@@ -49,7 +49,7 @@ window.abc = "abc";
 
 ## Options
 
-## clearGlobal
+### clearGlobal
 
 ```
 $ cmdize example.js --clear-global
