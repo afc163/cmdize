@@ -8,6 +8,11 @@ module.exports = function(code, options, callback) {
 
   code = code.toString().trim();
 
+  if (supportCommonJS(code)) {
+    callback && callback(wrapper(code));
+    return;
+  }
+
   fs.writeFileSync('/tmp/cmdize-tmp.html', '<script>' + code + '</script>');
 
   var phantomjs;
@@ -41,3 +46,9 @@ module.exports = function(code, options, callback) {
   });
 
 };
+
+function supportCommonJS(code) {
+  if (code.indexOf('module.exports') > 0) {
+    return true;
+  }
+}
