@@ -6,7 +6,7 @@
 
 Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md) [中文定义](https://github.com/seajs/seajs/issues/242))
 
-> It is a experimental project, being cautious to use it in important situation please!
+> It is a experimental project, being cautious to use it in important situation!
 
 ![demo](https://i.alipayobjects.com/e/201310/1OP6NAiAzF.png)
 
