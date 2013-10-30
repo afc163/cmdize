@@ -16,7 +16,7 @@ Support some famous JavaScript libraries(jQuery、underscore、momentjs) and no-
 
 ## Install
 
-```
+```bash
 $ npm install cmdize -g
 ```
 
@@ -30,11 +30,11 @@ window.abc = "abc";
 
 Cmdize it!
 
-```
+```bash
 $ cmdize example.js
 ```
 
-```
+```bash
 Reading /Users/afc163/Desktop/example.js ...
 No found any global variables.
 cmdized.js is generated.
@@ -51,7 +51,7 @@ window.abc = "abc";
 
 Also support url.
 
-```
+```bash
 $ cmdize http://code.jquery.com/jquery-1.10.1.js
 ```
 
@@ -59,7 +59,7 @@ $ cmdize http://code.jquery.com/jquery-1.10.1.js
 
 ### clearGlobal
 
-```
+```bash
 $ cmdize example.js --clear-global
 ```
 
