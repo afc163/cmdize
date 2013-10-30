@@ -21,7 +21,8 @@
     "colorful": "~2.1.0",
     "phantomjs": "~1.9.2-2",
     "win-spawn": "~2.0.0",
-    "node-static": "~0.7.2"
+    "node-static": "~0.7.2",
+    "request": "~2.27.0"
   },
   "devDependencies": {
     "mocha": "*",

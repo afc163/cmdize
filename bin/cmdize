@@ -4,7 +4,8 @@ var path = require('path'),
     fs = require('fs'),
     program = require('commander'),
     pkg = require('../package.json'),
-    cmdize = require('../index');
+    cmdize = require('../index'),
+    request = require('request');
 
 require('colorful').toxic();
 
@@ -28,20 +29,32 @@ if (!process.argv[2]) {
   program.help();
 }
 
-var files = process.argv.slice(2);
-var fpath = fs.realpathSync(files[0]);
-var code = fs.readFileSync(fpath);
-
-console.log('Reading ' + fpath.cyan + ' ...');
-
 var options = {};
 options.clearGlobal = program.clearGlobal;
 
-cmdize(code, options, function(result) {
-    fs.writeFileSync('cmdized.js', result);
-    console.log('cmdized.js is generated.');
-    console.log('  >> ' + path.resolve('cmdized.js').green);
+var file = process.argv.slice(2)[0];
+console.log('Reading ' + file.cyan + ' ...');
 
-    // force to exit
-    process.exit(0);
-});
+// url like: http://code.jquery.com/jquery-1.10.1.js
+if (/^http(s?):\/\//.test(file)) {
+    request.get(file, function(e, r, body) {
+        main(body);
+    });
+    return;
+} else {
+    var fpath = fs.realpathSync(file);
+    code = fs.readFileSync(fpath);
+    main(code);
+}
+
+function main(code) {
+    cmdize(code, options, function(result) {
+        var filename = path.basename(file).replace('.js', '-cmdized.js');
+        fs.writeFileSync(filename, result);
+        console.log('cmdized.js is generated.');
+        console.log('  >> ' + path.resolve(filename).green);
+
+        // force to exit
+        process.exit(0);
+    });
+}
