@@ -8,9 +8,8 @@ module.exports = function(code, options, callback) {
 
   code = code.toString().trim();
   var type = checkType(code);
-  console.log(type);
 
-  if (type === 'jQuery' || type === 'CommonJS' || type === 'jQueryPlugin') {
+  if (type === 'CommonJS' || type === 'jQueryPlugin') {
     callback && callback(wrapper(code, {
       type: type
     }));
