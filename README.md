@@ -38,15 +38,21 @@ $ cmdize example.js
 Reading /Users/afc163/Desktop/example.js ...
 No found any global variables.
 cmdized.js is generated.
-  >> /Users/afc163/Projects/cmdize/cmdized.js
+  >> /Users/afc163/Projects/cmdize/example-cmdized.js
 ```
 
-Then the `cmdized.js` would be generated:
+Then the `cmdized.js` would be generated at current path.
 
 ```js
 define(function(require, exports, module) {
 window.abc = "abc";
 });
+```
+
+Also support url.
+
+```
+$ cmdize http://code.jquery.com/jquery-1.10.1.js
 ```
 
 ## Options
