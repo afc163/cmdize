@@ -82,3 +82,7 @@ cmdize(code, options, function(result) {
   console.log(result);
 });
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/afc163/cmdize/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
