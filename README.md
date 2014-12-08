@@ -1,8 +1,12 @@
-# Cmdize 
+# Cmdize (deprecated)
 
 [![Build Status](https://travis-ci.org/afc163/cmdize.png)](https://travis-ci.org/afc163/cmdize)
 [![NPM version](https://badge.fury.io/js/cmdize.png)](http://badge.fury.io/js/cmdize)
 [![David Status](https://david-dm.org/afc163/cmdize.png)](https://david-dm.org/afc163/cmdize) 
+
+**Don't use it, write code in CommonJS, that is all.**
+
+---
 
 Convert normal js to CMD module.([What is CMD module?](https://github.com/cmdjs/specification/blob/master/draft/module.md) [中文定义](https://github.com/seajs/seajs/issues/242))
 
